@@ -1,22 +1,22 @@
 import "./App.css";
-
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./components/Homepage";
+import About from "./components/About";
+import Products from "./components/Products";
+import Cart from "./components/Cart";
+import NavBar from "./components/NavBar";
 function App() {
   return (
     <>
       <div className="App">
-        <h1 className="text-4xl font-bold text-blue-600">Hello world!</h1>
-      </div>
+        <NavBar />
 
-      <div className="flex justify-between flex-row items-center w-1/2 mx-auto  h-24 bg-orange-500 mt-20 rounded-xl px-8">
-        <div className="flex justify-center items-center bg-blue-500 w-16 h-16 text-white font-bold underline rounded-lg">
-          1
-        </div>
-        <div className="flex justify-center items-center bg-red-500 w-16 h-16 text-white font-bold underline rounded-full">
-          2
-        </div>
-        <div className="flex justify-center items-center bg-green-500 w-16 h-16 text-white font-bold underline rounded-2xl">
-          3
-        </div>
+        <Routes>
+          <Route to={"/"} element={<Homepage />}></Route>
+          <Route to={"/about"} element={<About />}></Route>
+          <Route to={"/products"} element={<Products />}></Route>
+          <Route to={"/cart"} element={<Cart />}></Route>
+        </Routes>
       </div>
     </>
   );
