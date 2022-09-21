@@ -3,12 +3,12 @@ import { NavLink, Routes } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
-      <div className="flex justify-between pr-10 gap-4 p-5">
+    <div className="text-white">
+      <div className="flex justify-between pr-10 gap-4 p-5 bg-blue-900">
         <NavLink to={"/"}>
-          <h1>Shop online!</h1>
+          <h1 className="font-bold text-4xl">Online Shop</h1>
         </NavLink>
-        <div className="flex justify-end gap-5">
+        <div className="flex justify-end gap-6 font-bold pr-4 text-2xl">
           <NavLink to={"/products"}>
             <h2>Products</h2>
           </NavLink>
