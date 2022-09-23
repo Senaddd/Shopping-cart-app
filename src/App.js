@@ -1,10 +1,10 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import About from "./components/About";
-import Products from "./components/Products";
-import Cart from "./components/Cart";
-import NavBar from "./components/NavBar";
+import Homepage from "./pages/Homepage/Homepage";
+import Cart from "./pages/Cart/Cartpage";
+import NavBar from "./components/Navbar/NavBar";
+import AboutPage from "./pages/About/AboutPage";
+import Cartpage from "./pages/Cart/Cartpage";
 function App() {
   return (
     <>
@@ -13,9 +13,8 @@ function App() {
 
         <Routes>
           <Route to={"/"} element={<Homepage />}></Route>
-          <Route to={"/about"} element={<About />}></Route>
-          <Route to={"/products"} element={<Products />}></Route>
-          <Route to={"/cart"} element={<Cart />}></Route>
+          <Route to={"/about"} element={<AboutPage />}></Route>
+          <Route to={"/cart"} element={<Cartpage />}></Route>
         </Routes>
       </div>
     </>
