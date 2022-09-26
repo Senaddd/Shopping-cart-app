@@ -9,7 +9,7 @@ const NavBar = () => {
           <h1 className="font-bold text-4xl">Online Shop</h1>
         </NavLink>
         <div className="flex justify-end gap-6 font-bold pr-4 text-2xl">
-          <NavLink to={"/products"}>
+          <NavLink to={"/"}>
             <h2>Products</h2>
           </NavLink>
           <NavLink to={"/about"}>
