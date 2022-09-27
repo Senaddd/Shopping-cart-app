@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
-import ProductCard from "../../components/Product/ProductCard";
 
 export default function CartPage() {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
