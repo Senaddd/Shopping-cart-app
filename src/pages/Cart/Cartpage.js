@@ -36,8 +36,7 @@ export default function CartPage() {
             >
               <img src={product.imgUrl} alt="nesto" width={50} />
               <div className="flex-col ml-8 justify-center">
-                <h2 className="font-bold">Naslov</h2>
-                <p>{product.name}</p>
+                <h2 className="font-bold p-4">{product.name}</h2>
               </div>
               <div className="mx-10 flex justify-center my-3">
                 <p className="text-bold">Amout:</p>
@@ -62,7 +61,12 @@ export default function CartPage() {
                 Total Amout: {product.price * product.quantity}{" "}
                 {product.currency}
               </div>
-              <button onClick={() => removeFromCart(product.id)}>X</button>
+              <button
+                className="p-3"
+                onClick={() => removeFromCart(product.id)}
+              >
+                X
+              </button>
             </div>
           ))}
         </div>
