@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { Link } from "react-router-dom";
-
+import Footer from "../../components/Footer/Footer";
 export default function CartPage() {
   const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
     useContext(ShoppingCartContext);
@@ -37,7 +37,7 @@ export default function CartPage() {
               <img src={product.imgUrl} alt="nesto" width={50} />
               <div className="flex-col ml-8 justify-center">
                 <h2 className="font-bold">Naslov</h2>
-                <p>blablablalbalblalblalbal</p>
+                <p>{product.name}</p>
               </div>
               <div className="mx-10 flex justify-center my-3">
                 <p className="text-bold">Amout:</p>

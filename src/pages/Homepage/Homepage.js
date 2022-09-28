@@ -6,16 +6,14 @@ import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 export default function HomePage() {
   const { addToCart } = useContext(ShoppingCartContext);
   return (
-    <>
-      <div className="flex w-full justify-center mt-5 h-1/5 flex-row  ">
-        <img
-          className=" flex  w-7/12 h-1/5 "
-          src="https://th.bing.com/th/id/OIP.HoYmNK9LK2rc2mUetSgcBAHaDP?w=350&h=153&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-          alt="slika"
-        />
-      </div>
+    <div className="w-full h-full">
+      <img
+        className="w-full w-70"
+        src="https://img.gigatron.rs/m.html/apple/apple_mac/images/01_header.jpg"
+        alt="slika"
+      />
 
-      <div className="flex justify-center items-center">
+      <div className=" w-full flex flex-wrap flex-row bg-gray-100">
         {products.map((product) => (
           <ProductCard
             key={product.id}
@@ -26,6 +24,6 @@ export default function HomePage() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
